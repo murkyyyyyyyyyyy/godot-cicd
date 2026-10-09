@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://6q2rv6nbwel4"]
+
+[ext_resource type="Script" uid="uid://drwwun1unosd8" path="res://scripts/start.gd" id="1_3d1i7"]
+[ext_resource type="Script" uid="uid://b3hg1q5kqqxcx" path="res://scripts/exit.gd" id="2_48ign"]
+
+[node name="Node2D" type="Node2D" unique_id=935881359]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1153145082]
+modulate = Color(0.18431373, 0.27450982, 1, 1)
+z_index = -1
+offset_right = 1149.0
+offset_bottom = 652.0
+
+[node name="Control" type="Control" parent="." unique_id=176792627]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="Control" unique_id=1376825459]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 175.0
+offset_right = 936.0
+offset_bottom = 280.0
+text = "Start"
+script = ExtResource("1_3d1i7")
+
+[node name="Exit" type="Button" parent="Control" unique_id=1505895354]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 488.0
+offset_right = 834.0
+offset_bottom = 540.0
+text = "Exit
+"
+script = ExtResource("2_48ign")
+
+[connection signal="pressed" from="Control/Start" to="Control/Start" method="_on_pressed"]
+[connection signal="pressed" from="Control/Exit" to="Control/Exit" method="_on_pressed"]
